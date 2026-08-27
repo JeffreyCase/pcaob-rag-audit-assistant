@@ -1,0 +1,99 @@
+[
+  {
+    "question_id": "Q01",
+    "question": "What control-testing deficiencies did Deloitte identify in 2024 for disclosures about unsatisfied performance obligations?",
+    "answerable_from_reports": true,
+    "expected_firm": "Deloitte",
+    "expected_year": 2024,
+    "expected_topic": "Unsatisfied performance obligations and report completeness"
+  },
+  {
+    "question_id": "Q02",
+    "question": "Why was Deloitte's use of recorded revenue data in 2023 substantive analytical procedures deficient?",
+    "answerable_from_reports": true,
+    "expected_firm": "Deloitte",
+    "expected_year": 2023,
+    "expected_topic": "Relevance and reliability of data used to form an expectation"
+  },
+  {
+    "question_id": "Q03",
+    "question": "What examples in Deloitte's 2022 inspection show insufficient substantive testing of revenue?",
+    "answerable_from_reports": true,
+    "expected_firm": "Deloitte",
+    "expected_year": 2022,
+    "expected_topic": "No procedures, weak analytical procedures, and unreliable data"
+  },
+  {
+    "question_id": "Q04",
+    "question": "How did weaknesses in IT systems and IT controls affect EY's 2024 testing of revenue, deferred revenue, and accounts receivable?",
+    "answerable_from_reports": true,
+    "expected_firm": "EY",
+    "expected_year": 2024,
+    "expected_topic": "ITGCs, automated controls, reports, and unsupported reliance"
+  },
+  {
+    "question_id": "Q05",
+    "question": "What completeness problem did EY's 2024 inspection identify in the population of new and modified contracts reviewed for revenue recognition?",
+    "answerable_from_reports": true,
+    "expected_firm": "EY",
+    "expected_year": 2024,
+    "expected_topic": "Completeness of contracts selected for review"
+  },
+  {
+    "question_id": "Q06",
+    "question": "What did EY fail to test in 2023 when an issuer allocated revenue among multiple performance obligations using standalone selling prices?",
+    "answerable_from_reports": true,
+    "expected_firm": "EY",
+    "expected_year": 2023,
+    "expected_topic": "Methods and assumptions for standalone selling prices under ASC 606"
+  },
+  {
+    "question_id": "Q07",
+    "question": "What revenue-control deficiencies did EY identify in 2023 for an audit area assessed as a fraud risk?",
+    "answerable_from_reports": true,
+    "expected_firm": "EY",
+    "expected_year": 2023,
+    "expected_topic": "Accuracy and completeness of reports and automated pricing controls"
+  },
+  {
+    "question_id": "Q08",
+    "question": "What was deficient about EY's 2022 testing of revenue recognized when electronic delivery occurred?",
+    "answerable_from_reports": true,
+    "expected_firm": "EY",
+    "expected_year": 2022,
+    "expected_topic": "Controls over accuracy of electronic delivery dates"
+  },
+  {
+    "question_id": "Q09",
+    "question": "Across the selected reports, what recurring types of revenue-audit deficiencies appear?",
+    "answerable_from_reports": true,
+    "expected_firm": "Both",
+    "expected_year": "2022-2024",
+    "expected_topic": "Recurring themes across control and substantive testing"
+  },
+  {
+    "question_id": "Q10",
+    "question": "What were the exact company names of the issuers discussed in EY's 2024 revenue findings?",
+    "answerable_from_reports": false,
+    "expected_firm": "EY",
+    "expected_year": 2024,
+    "expected_topic": "Issuer identities are anonymized"
+  },
+  {
+    "question_id": "Q11",
+    "question": "What exact dollar amount of revenue misstatement resulted from Deloitte's 2023 deficiencies?",
+    "answerable_from_reports": false,
+    "expected_firm": "Deloitte",
+    "expected_year": 2023,
+    "expected_topic": "Exact misstatement amount is not provided"
+  },
+  {
+    "question_id": "Q12",
+    "question": "Which of Deloitte or EY has better overall audit quality based on these six reports?",
+    "answerable_from_reports": false,
+    "expected_firm": "Both",
+    "expected_year": "2022-2024",
+    "expected_topic": "Selected inspections cannot support an overall firm ranking"
+  }
+]
+

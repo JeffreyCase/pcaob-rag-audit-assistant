@@ -1,0 +1,45 @@
+[
+  {
+    "firm": "Deloitte & Touche LLP",
+    "firm_short": "Deloitte",
+    "inspection_year": 2024,
+    "filename": "deloitte_2024.pdf",
+    "source_url": "https://assets.pcaobus.org/pcaob-dev/docs/default-source/inspections/documents/104-2025-036-deloitte.pdf"
+  },
+  {
+    "firm": "Deloitte & Touche LLP",
+    "firm_short": "Deloitte",
+    "inspection_year": 2023,
+    "filename": "deloitte_2023.pdf",
+    "source_url": "https://assets.pcaobus.org/pcaob-dev/docs/default-source/inspections/reports/documents/104-2024-077-dt.pdf?sfvrsn=188ce903_2"
+  },
+  {
+    "firm": "Deloitte & Touche LLP",
+    "firm_short": "Deloitte",
+    "inspection_year": 2022,
+    "filename": "deloitte_2022.pdf",
+    "source_url": "https://assets.pcaobus.org/pcaob-dev/docs/default-source/inspections/reports/documents/104-2024-032-dt.pdf?sfvrsn=89a939eb_4"
+  },
+  {
+    "firm": "Ernst & Young LLP",
+    "firm_short": "EY",
+    "inspection_year": 2024,
+    "filename": "ey_2024.pdf",
+    "source_url": "https://assets.pcaobus.org/pcaob-dev/docs/default-source/inspections/documents/104-2025-037-e-y.pdf?sfvrsn=b29e7110_2"
+  },
+  {
+    "firm": "Ernst & Young LLP",
+    "firm_short": "EY",
+    "inspection_year": 2023,
+    "filename": "ey_2023.pdf",
+    "source_url": "https://assets.pcaobus.org/pcaob-dev/docs/default-source/inspections/reports/documents/104-2024-095-e-y.pdf?sfvrsn=7e4895cf_2"
+  },
+  {
+    "firm": "Ernst & Young LLP",
+    "firm_short": "EY",
+    "inspection_year": 2022,
+    "filename": "ey_2022.pdf",
+    "source_url": "https://assets.pcaobus.org/pcaob-dev/docs/default-source/inspections/reports/documents/104-2024-033-ey.pdf?sfvrsn=dcfd5d18_4"
+  }
+]
+

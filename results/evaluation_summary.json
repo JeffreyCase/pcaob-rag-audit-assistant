@@ -1,0 +1,33 @@
+{
+  "benchmark_name": "12-question PCAOB inspection-finding benchmark",
+  "review_method": "Automated checks followed by human review of source support, citation accuracy, usefulness, and refusal behavior.",
+  "metrics": {
+    "retrieval_checks_passed": 12,
+    "retrieval_checks_total": 12,
+    "first_prototype_retrieval_hits": 10,
+    "answerable_questions": 9,
+    "supported_answers": 8,
+    "correct_citations_among_supported": 7,
+    "unsupported_questions": 3,
+    "correct_refusals": 3,
+    "correct_rag_behavior": 11,
+    "plain_supported_answerable": 0,
+    "rag_better_answerable": 8,
+    "rag_usefulness_answerable": 4.11,
+    "plain_usefulness_answerable": 1.22
+  },
+  "known_exceptions": [
+    {
+      "question_id": "Q07",
+      "stage": "Citation formatting",
+      "result": "The answer was supported, but one citation label was malformed."
+    },
+    {
+      "question_id": "Q08",
+      "stage": "Generation",
+      "result": "The correct EY 2022 evidence was retrieved, but the model over-refused."
+    }
+  ],
+  "interpretation": "Results apply only to this small, defined benchmark and do not establish production accuracy or generalize to all PCAOB reports or audit questions."
+}
+

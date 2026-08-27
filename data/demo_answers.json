@@ -1,0 +1,62 @@
+[
+  {
+    "question_id": "Q05",
+    "label": "Supported answer: contract completeness",
+    "question": "What completeness problem did EY's 2024 inspection identify in the population of new and modified contracts reviewed for revenue recognition?",
+    "status": "Supported answer",
+    "answer": "The inspection finding indicated that EY did not evaluate whether the first control was designed to identify a complete population of new and modified contracts for the second control's revenue-recognition review [EY, 2024 inspection, PDF p. 20]. In audit terms, the downstream review could not be relied upon without first addressing the completeness of the population feeding it [EY, 2024 inspection, PDF p. 20].",
+    "review_note": "Human review rated this answer 5/5 for usefulness and confirmed that EY 2024, PDF page 20 directly supported it.",
+    "sources": [
+      {
+        "citation": "[EY, 2024 inspection, PDF p. 20]",
+        "excerpt": "The firm did not evaluate whether the first control was designed to address whether a complete population was identified.",
+        "source_url": "https://assets.pcaobus.org/pcaob-dev/docs/default-source/inspections/documents/104-2025-037-e-y.pdf?sfvrsn=b29e7110_2"
+      }
+    ]
+  },
+  {
+    "question_id": "Q02",
+    "label": "Supported answer: substantive analytics",
+    "question": "Why was Deloitte's use of recorded revenue data in 2023 substantive analytical procedures deficient?",
+    "status": "Supported answer",
+    "answer": "Deloitte did not evaluate whether recorded-revenue data used to develop its analytical expectations were sufficiently relevant and reliable for the audit objective [Deloitte, 2023 inspection, PDF p. 20]. The expectations were also not precise enough because the underlying data omitted important factors the issuer disclosed as affecting sales [Deloitte, 2023 inspection, PDF p. 23].",
+    "review_note": "Human review rated this answer 4/5 for usefulness and confirmed that the cited Deloitte pages supported it.",
+    "sources": [
+      {
+        "citation": "[Deloitte, 2023 inspection, PDF p. 20]",
+        "excerpt": "The firm did not evaluate whether these data were sufficiently relevant and reliable for the purpose of achieving its audit objectives.",
+        "source_url": "https://assets.pcaobus.org/pcaob-dev/docs/default-source/inspections/reports/documents/104-2024-077-dt.pdf?sfvrsn=188ce903_2"
+      },
+      {
+        "citation": "[Deloitte, 2023 inspection, PDF p. 23]",
+        "excerpt": "The expectations the firm used were not sufficiently precise to identify differences that could be potential material misstatements.",
+        "source_url": "https://assets.pcaobus.org/pcaob-dev/docs/default-source/inspections/reports/documents/104-2024-077-dt.pdf?sfvrsn=188ce903_2"
+      }
+    ]
+  },
+  {
+    "question_id": "Q12",
+    "label": "Correct refusal: firm ranking",
+    "question": "Which of Deloitte or EY has better overall audit quality based on these six reports?",
+    "status": "Correct refusal",
+    "answer": "The selected PCAOB inspection reports do not provide enough information to answer that question.",
+    "review_note": "Human review confirmed this refusal. PCAOB inspection reports focus on selected audit work and are not overall firm ratings.",
+    "sources": []
+  },
+  {
+    "question_id": "Q08",
+    "label": "Known limitation: over-refusal",
+    "question": "What was deficient about EY's 2022 testing of revenue recognized when electronic delivery occurred?",
+    "status": "Generation failure",
+    "answer": "The selected PCAOB inspection reports do not provide enough information to answer that question.",
+    "review_note": "The correct evidence was retrieved, but the model incorrectly refused. This was recorded as a generation-side failure, not a retrieval failure.",
+    "sources": [
+      {
+        "citation": "[EY, 2022 inspection, PDF p. 20]",
+        "excerpt": "The firm did not identify and test any controls over the accuracy of these delivery dates.",
+        "source_url": "https://assets.pcaobus.org/pcaob-dev/docs/default-source/inspections/reports/documents/104-2024-033-ey.pdf?sfvrsn=dcfd5d18_4"
+      }
+    ]
+  }
+]
+

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">PCAOB RAG assistant evaluation summary</title>
+  <desc id="desc">Eight of nine answerable questions were supported, seven of eight supported answers had correct citations, all three unsupported questions were refused, and usefulness was 4.1 for RAG versus 1.2 for the plain model.</desc>
+  <rect width="1200" height="630" rx="28" fill="#f6f8fc"/>
+  <rect x="0" y="0" width="1200" height="108" rx="28" fill="#18264f"/>
+  <rect x="0" y="80" width="1200" height="28" fill="#18264f"/>
+  <text x="58" y="54" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#38c2a7" letter-spacing="2">HUMAN-REVIEWED BENCHMARK</text>
+  <text x="58" y="87" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#ffffff">Grounding improved support, traceability, and usefulness</text>
+
+  <text x="58" y="159" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#18264f">Answer and refusal quality</text>
+  <rect x="58" y="183" width="302" height="125" rx="16" fill="#e3f5f0" stroke="#b7e5da"/>
+  <text x="82" y="239" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="700" fill="#15987f">8/9</text>
+  <text x="82" y="275" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#18264f">Supported answers</text>
+  <text x="82" y="296" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#5f6b81">among answerable questions</text>
+
+  <rect x="58" y="326" width="302" height="125" rx="16" fill="#ffffff" stroke="#dce2ec"/>
+  <text x="82" y="382" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="700" fill="#18264f">7/8</text>
+  <text x="82" y="418" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#18264f">Correct citations</text>
+  <text x="82" y="439" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#5f6b81">among supported answers</text>
+
+  <rect x="58" y="469" width="302" height="105" rx="16" fill="#18264f"/>
+  <text x="82" y="518" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="700" fill="#ffffff">3/3</text>
+  <text x="82" y="551" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Correct unsupported refusals</text>
+
+  <line x1="415" y1="158" x2="415" y2="574" stroke="#dce2ec" stroke-width="2"/>
+  <text x="470" y="159" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#18264f">Usefulness to a junior auditor</text>
+  <text x="470" y="184" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#5f6b81">Average score on the nine answerable questions (1–5 scale)</text>
+
+  <text x="470" y="261" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#18264f">Grounded RAG</text>
+  <rect x="470" y="281" width="596" height="58" rx="8" fill="#e3f5f0"/>
+  <rect x="470" y="281" width="489" height="58" rx="8" fill="#1aaa90"/>
+  <text x="979" y="319" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#18264f">4.1</text>
+
+  <text x="470" y="400" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#18264f">Plain model</text>
+  <rect x="470" y="420" width="596" height="58" rx="8" fill="#f2e8e5"/>
+  <rect x="470" y="420" width="143" height="58" rx="8" fill="#c94332"/>
+  <text x="633" y="458" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#18264f">1.2</text>
+
+  <rect x="470" y="516" width="646" height="58" rx="10" fill="#fff7df" stroke="#e9c65f"/>
+  <text x="493" y="540" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#715b1d">Interpret carefully</text>
+  <text x="493" y="561" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#5f553a">Small 12-question academic benchmark; not a production-accuracy claim.</text>
+</svg>
+
