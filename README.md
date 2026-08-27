@@ -138,6 +138,7 @@ streamlit run app.py
 Live generation is not needed to review the portfolio. To reproduce the document pipeline and run a new question:
 
 ```bash
+pip install -r requirements-pipeline.txt
 pip install -e .
 python scripts/build_corpus.py
 ```
@@ -165,7 +166,8 @@ pcaob-rag-audit-assistant/
 ├── src/pcaob_rag/                 # Extraction, retrieval, generation, evaluation
 ├── tests/                         # Lightweight regression tests
 ├── .env.example
-└── requirements.txt
+├── requirements.txt               # Lightweight Streamlit demo dependency
+└── requirements-pipeline.txt      # Full extraction, retrieval, and generation stack
 ```
 
 ## Limitations

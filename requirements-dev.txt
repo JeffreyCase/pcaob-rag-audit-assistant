@@ -1,4 +1,4 @@
 -r requirements.txt
+-r requirements-pipeline.txt
 pytest>=8,<9
 ruff>=0.12,<1
-
