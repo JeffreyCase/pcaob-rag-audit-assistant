@@ -32,8 +32,10 @@ st.markdown(
       .block-container {max-width: 1120px; padding-top: 2rem;}
       .hero-kicker {color:#138f7a; font-weight:700; letter-spacing:.08em;
                     text-transform:uppercase; font-size:.85rem;}
-      .answer-card {background:#f7f9fc; border-left:5px solid #18a98f;
-                    border-radius:8px; padding:1.25rem 1.4rem; margin:.75rem 0 1rem;}
+      .answer-card {background:#f7f9fc; color:#1f2937;
+                    border-left:5px solid #18a98f; border-radius:8px;
+                    padding:1.25rem 1.4rem; margin:.75rem 0 1rem;
+                    line-height:1.6;}
       .status {display:inline-block; border-radius:999px; padding:.25rem .65rem;
                background:#e3f5f0; color:#0e6f60; font-size:.82rem; font-weight:700;}
       .small-note {color:#596579; font-size:.9rem;}
@@ -109,4 +111,3 @@ st.caption(
     "two firms, three inspection years, and one audit topic; it has not been tested "
     "with practicing auditors or validated for production use."
 )
-
