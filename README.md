@@ -4,7 +4,7 @@
 
 An academic audit-research prototype that retrieves relevant PCAOB inspection findings before asking a language model to answer. The objective is not to automate professional judgment; it is to make selected findings easier for a junior auditor to locate, understand, and verify.
 
-> **Portfolio context:** This project originated as a four-person Rutgers Master of Accountancy in Accounting & Analytics team project. [Jeffrey Case](https://github.com/JeffreyCase) developed the Python pipeline and related technical, testing, and results materials. After the course submission, Jeffrey independently converted the prototype into this public portfolio edition by reorganizing the codebase, building and deploying the Streamlit demonstration, adding tests and governance documentation, and validating the final experience.
+> **Portfolio context:** I originally developed this prototype as part of a four-person Rutgers Master of Accountancy in Accounting & Analytics team. My primary responsibility was the Python pipeline and the related technical, testing, and results materials. After the course submission, I independently converted the prototype into this public portfolio edition by reorganizing the codebase, building and deploying the Streamlit demonstration, adding tests and governance documentation, and validating the final experience.
 
 ## The business problem
 
@@ -191,10 +191,10 @@ Any production use would require approved data handling, prompt sanitization, ac
 
 ## Project origin, individual contribution, and AI assistance
 
-The original academic project was completed by a four-person Rutgers MAcc student team. [Jeffrey Case](https://github.com/JeffreyCase) developed the Python pipeline and the corresponding technical pipeline, testing, and results slides, and contributed to debugging and evaluation. Problem framing, audit interpretation, written deliverables, and the final presentation were completed within the team project. Other team members are credited collectively to respect their public-profile preferences.
+I originally completed this academic project with three classmates in the Rutgers MAcc program. I developed the Python pipeline and the corresponding technical, testing, and results slides, and I contributed to debugging and evaluation. My teammates and I shared responsibility for the problem framing, audit interpretation, written deliverables, and final presentation. I credit the other team members collectively to respect their public-profile preferences.
 
-After the course submission, Jeffrey independently led the portfolio conversion. He reorganized the original work into the public codebase shown here, created and deployed the no-key Streamlit demonstration, added regression tests and public governance documentation, and validated the final repository and app. This post-course portfolio work was completed independently of the original team.
+After the course submission, I independently led the portfolio conversion. I reorganized the original work into the public codebase shown here, created and deployed the no-key Streamlit demonstration, added regression tests and public governance documentation, and validated the final repository and app. I completed this post-course portfolio work independently of the original team.
 
-Gemini served as the generation engine and the ungrounded comparison model. ChatGPT, Claude, and other generative-AI assistance were used during portions of brainstorming, code refinement/debugging, wireframe or presentation development, drafting, and review. Team members reviewed, tested, corrected, and approved the submitted academic work; Jeffrey reviewed and tested the subsequent public portfolio changes and remains responsible for how this edition is presented.
+I used Gemini as the generation engine and the ungrounded comparison model. I also used ChatGPT, Claude, and other generative-AI assistance for portions of brainstorming, code refinement and debugging, wireframe or presentation development, drafting, and review. My teammates and I reviewed, tested, corrected, and approved the submitted academic work. I reviewed and tested the subsequent public portfolio changes and remain responsible for how this edition is presented.
 
 This project is not affiliated with or endorsed by the PCAOB, Deloitte, EY, Google, AICPA, COSO, or Rutgers University.
