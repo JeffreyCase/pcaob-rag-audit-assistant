@@ -1,5 +1,7 @@
 # PCAOB RAG Audit Assistant
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pcaob-rag-audit-assistant.streamlit.app/)
+
 An academic audit-research prototype that retrieves relevant PCAOB inspection findings before asking a language model to answer. The objective is not to automate professional judgment; it is to make selected findings easier for a junior auditor to locate, understand, and verify.
 
 > **Portfolio context:** This was developed as a four-person Rutgers Master of Accountancy in Accounting & Analytics team project. [Jeffrey Case](https://github.com/JeffreyCase) developed the Python pipeline and related technical slides and contributed to testing, debugging, and evaluation.
@@ -108,7 +110,7 @@ These exceptions are important: finding the correct evidence does not guarantee 
 
 ## Run the recruiter demo
 
-The default Streamlit app uses reviewed, saved examples. It does not require an API key and does not send questions to an external model.
+Open the [live recruiter demo](https://pcaob-rag-audit-assistant.streamlit.app/), or run it locally using the instructions below. The default Streamlit app uses reviewed, saved examples. It does not require an API key and does not send questions to an external model.
 
 ```bash
 git clone https://github.com/JeffreyCase/pcaob-rag-audit-assistant.git
