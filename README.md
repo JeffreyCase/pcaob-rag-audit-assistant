@@ -4,7 +4,7 @@
 
 An academic audit-research prototype that retrieves relevant PCAOB inspection findings before asking a language model to answer. The objective is not to automate professional judgment; it is to make selected findings easier for a junior auditor to locate, understand, and verify.
 
-> **Portfolio context:** This was developed as a four-person Rutgers Master of Accountancy in Accounting & Analytics team project. [Jeffrey Case](https://github.com/JeffreyCase) developed the Python pipeline and related technical slides and contributed to testing, debugging, and evaluation.
+> **Portfolio context:** This project originated as a four-person Rutgers Master of Accountancy in Accounting & Analytics team project. [Jeffrey Case](https://github.com/JeffreyCase) developed the Python pipeline and related technical, testing, and results materials. After the course submission, Jeffrey independently converted the prototype into this public portfolio edition by reorganizing the codebase, building and deploying the Streamlit demonstration, adding tests and governance documentation, and validating the final experience.
 
 ## The business problem
 
@@ -189,10 +189,12 @@ This is an academic coaching and research prototype. Its outputs are not audit e
 
 Any production use would require approved data handling, prompt sanitization, access controls, external-provider retention safeguards, logging and monitoring, validation, change management, and accountable human review. The [AICPA Code of Professional Conduct](https://pub.aicpa.org/codeofconduct/ethicsresources/et-cod.pdf) provides relevant principles concerning competence, due care, sufficient relevant data, compliance with standards, and confidential client information. COSO provides a control-oriented framework for managing GenAI risks; it is guidance rather than a certification that this prototype is compliant. See [COSO's GenAI control guidance](https://www.coso.org/_files/ugd/719ba0_e08afa6e8d7940cd9ae18d0c25b2cb55.pdf) and the repository's [governance notes](docs/GOVERNANCE.md).
 
-## Team contribution and AI assistance
+## Project origin, individual contribution, and AI assistance
 
-This project was completed by a four-person Rutgers MAcc student team. [Jeffrey Case](https://github.com/JeffreyCase) developed the Python pipeline and the corresponding technical pipeline, testing, and results slides, and contributed to debugging and evaluation. Problem framing, audit interpretation, written deliverables, and the final presentation were completed within the team project. Other team members are credited collectively to respect their public-profile preferences.
+The original academic project was completed by a four-person Rutgers MAcc student team. [Jeffrey Case](https://github.com/JeffreyCase) developed the Python pipeline and the corresponding technical pipeline, testing, and results slides, and contributed to debugging and evaluation. Problem framing, audit interpretation, written deliverables, and the final presentation were completed within the team project. Other team members are credited collectively to respect their public-profile preferences.
 
-Gemini served as the generation engine and the ungrounded comparison model. ChatGPT, Claude, and other generative-AI assistance were used during portions of brainstorming, code refinement/debugging, wireframe or presentation development, drafting, and review. Team members reviewed, tested, corrected, and approved the submitted code, analysis, citations, and conclusions.
+After the course submission, Jeffrey independently led the portfolio conversion. He reorganized the original work into the public codebase shown here, created and deployed the no-key Streamlit demonstration, added regression tests and public governance documentation, and validated the final repository and app. This post-course portfolio work was completed independently of the original team.
+
+Gemini served as the generation engine and the ungrounded comparison model. ChatGPT, Claude, and other generative-AI assistance were used during portions of brainstorming, code refinement/debugging, wireframe or presentation development, drafting, and review. Team members reviewed, tested, corrected, and approved the submitted academic work; Jeffrey reviewed and tested the subsequent public portfolio changes and remains responsible for how this edition is presented.
 
 This project is not affiliated with or endorsed by the PCAOB, Deloitte, EY, Google, AICPA, COSO, or Rutgers University.
