@@ -1,0 +1,8 @@
+[theme]
+base = "light"
+primaryColor = "#0F766E"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F4F7FA"
+textColor = "#1F2937"
+linkColor = "#0F766E"
+showSidebarBorder = true
