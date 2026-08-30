@@ -76,9 +76,9 @@ with st.sidebar:
     )
     st.link_button("View GitHub repository", GITHUB_URL, use_container_width=True)
     st.caption(
-        "Original prototype: four-person Rutgers MAcc team project. Jeffrey Case "
-        "developed the Python pipeline and independently converted it into this "
-        "public portfolio demonstration after submission."
+        "I originally developed this prototype with three classmates in the Rutgers "
+        "MAcc program. I built the Python pipeline and independently converted the "
+        "submitted prototype into this public portfolio demonstration."
     )
 
 st.markdown(
@@ -229,15 +229,15 @@ with method_tab:
 
     with st.expander("Project origin, portfolio work, and AI assistance"):
         st.write(
-            "The original prototype was completed as a four-person Rutgers Master of "
-            "Accountancy team project. Jeffrey Case developed the Python pipeline and "
-            "corresponding technical, testing, and results materials. The wider team "
-            "shared the audit framing, written deliverables, and final presentation. "
-            "After submission, Jeffrey independently reorganized the codebase, built "
-            "and deployed this no-key Streamlit demonstration, added tests and public "
-            "governance documentation, and validated the portfolio edition. Gemini "
-            "was the generation and comparison model; generative-AI tools also "
-            "assisted portions of brainstorming, code refinement, drafting, and "
-            "review. The submitted work and public portfolio changes were reviewed "
-            "and tested before publication."
+            "I originally developed this prototype with three classmates in the "
+            "Rutgers Master of Accountancy program. I built the Python pipeline and "
+            "corresponding technical, testing, and results materials. My teammates "
+            "and I shared the audit framing, written deliverables, and final "
+            "presentation. After submission, I independently reorganized the "
+            "codebase, built and deployed this no-key Streamlit demonstration, added "
+            "tests and public governance documentation, and validated the portfolio "
+            "edition. I used Gemini as the generation and comparison model, while "
+            "other generative-AI tools assisted portions of brainstorming, code "
+            "refinement, drafting, and review. I reviewed and tested the public "
+            "portfolio changes before publication."
         )
