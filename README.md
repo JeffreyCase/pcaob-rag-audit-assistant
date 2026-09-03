@@ -2,9 +2,9 @@
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pcaob-rag-audit-assistant.streamlit.app/)
 
-An academic audit-research prototype that retrieves relevant PCAOB inspection findings before asking a language model to answer. The objective is not to automate professional judgment; it is to make selected findings easier for a junior auditor to locate, understand, and verify.
+An academic audit-research prototype that retrieves relevant PCAOB inspection findings before asking a language model to answer. The objective is to make selected findings easier for a junior auditor to locate, understand, and verify.
 
-> **Portfolio context:** I originally developed this prototype as part of a four-person Rutgers Master of Accountancy in Accounting & Analytics team. My primary responsibility was the Python pipeline and the related technical, testing, and results materials. After the course submission, I independently converted the prototype into this public portfolio edition by reorganizing the codebase, building and deploying the Streamlit demonstration, adding tests and governance documentation, and validating the final experience.
+I originally developed this prototype as part of a four-person Rutgers Master of Accountancy in Accounting & Analytics team. My primary responsibility was the Python pipeline and the related technical, testing, and results materials. After the course submission, I independently converted the prototype into this public portfolio edition by reorganizing the codebase, building and deploying the Streamlit demonstration, adding tests and governance documentation, and validating the final experience.
 
 ## The business problem
 
@@ -12,12 +12,12 @@ PCAOB inspection reports contain practical examples of audit deficiencies, but t
 
 This prototype tests whether retrieval-augmented generation (RAG) can support that research process by:
 
-- finding relevant report passages first;
-- generating a concise explanation from only those passages;
+- finding relevant report passages first
+- generating a concise explanation from only those passages
 - attaching report-and-page citations to substantive claims; and
 - refusing questions the selected reports cannot support.
 
-The PCAOB inspects portions of registered firms' audit work and elements of their quality-control systems to assess compliance with applicable laws, rules, and professional standards. That makes the public reports useful, real-world material for studying audit-quality issues. They are **not** balanced firm report cards or a basis for ranking overall firm quality. See the [PCAOB inspection overview](https://pcaobus.org/oversight/inspections) and [inspection-report caution](https://pcaobus.org/oversight/inspections/basics-of-inspections).
+The PCAOB inspects portions of registered firms' audit work and elements of their quality-control systems to assess compliance with applicable laws, rules, and professional standards. That makes the public reports useful, real-world material for studying audit-quality issues. They are not balanced firm report cards or a basis for ranking overall firm quality. See the [PCAOB inspection overview](https://pcaobus.org/oversight/inspections) and [inspection-report caution](https://pcaobus.org/oversight/inspections/basics-of-inspections).
 
 ## Prototype scope
 
@@ -41,7 +41,7 @@ The PCAOB inspects portions of registered firms' audit work and elements of thei
 7. Gives only the retrieved passages to Gemini, together with strict citation and refusal instructions.
 8. Saves outputs for automated checks and human review.
 
-In plain English, this is an **open-book workflow**: the retriever opens the relevant pages, and the language model writes from those pages.
+This is an open-book workflow. The retriever opens the relevant pages, and the language model writes from those pages.
 
 ```mermaid
 flowchart LR
@@ -74,7 +74,7 @@ The optional live-generation path uses Google's `google-genai` SDK and sets `sto
 
 ## Evaluation methodology
 
-The team created a fixed 12-question benchmark rather than demonstrating only favorable examples:
+I created a fixed 12-question benchmark rather than demonstrating only favorable examples:
 
 - **Nine answerable questions** were tied to a defined firm, year, topic, and expected evidence.
 - **Three intentionally unsupported questions** tested whether the system would refuse requests for anonymized issuer names, an undisclosed dollar amount, and an overall firm-quality ranking.
@@ -191,7 +191,7 @@ Any production use would require approved data handling, prompt sanitization, ac
 
 ## Project origin, individual contribution, and AI assistance
 
-I originally completed this academic project with three classmates in the Rutgers MAcc program. I developed the Python pipeline and the corresponding technical, testing, and results slides, and I contributed to debugging and evaluation. My teammates and I shared responsibility for the problem framing, audit interpretation, written deliverables, and final presentation. I credit the other team members collectively to respect their public-profile preferences.
+I originally completed this academic project with three classmates in the Rutgers MAcc program. I developed the Python pipeline and the corresponding technical, testing, and results slides, and I contributed to debugging and evaluation. My teammates and I shared responsibility for the problem framing, audit interpretation, written deliverables, and final presentation.
 
 After the course submission, I independently led the portfolio conversion. I reorganized the original work into the public codebase shown here, created and deployed the no-key Streamlit demonstration, added regression tests and public governance documentation, and validated the final repository and app. I completed this post-course portfolio work independently of the original team.
 
