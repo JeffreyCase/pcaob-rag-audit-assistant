@@ -11,6 +11,7 @@ import streamlit as st
 
 ROOT = Path(__file__).resolve().parent
 GITHUB_URL = "https://github.com/JeffreyCase/pcaob-rag-audit-assistant"
+PORTFOLIO_URL = "https://jeffrey-case-pcaob-audit.budrock.chatgpt.site"
 
 
 @st.cache_data
@@ -88,6 +89,11 @@ st.markdown(
     unsafe_allow_html=True,
 )
 st.title("PCAOB RAG Audit Assistant")
+st.link_button("Open updated portfolio demo", PORTFOLIO_URL, type="primary")
+st.caption(
+    "The updated portfolio presents the same reviewed examples in a refreshed layout. "
+    "This original demo remains available, and you can continue exploring below."
+)
 st.write(
     "A source-grounded research prototype designed to help junior auditors explore "
     "selected PCAOB inspection findings and trace every substantive claim to a "
