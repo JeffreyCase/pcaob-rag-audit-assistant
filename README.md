@@ -1,6 +1,8 @@
 # PCAOB RAG Audit Assistant
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pcaob-rag-audit-assistant.streamlit.app/)
+[Open portfolio demo](https://jeffrey-case-pcaob-audit.budrock.chatgpt.site) · [Original Streamlit demo](https://pcaob-rag-audit-assistant.streamlit.app/)
+
+The updated portfolio opens without a Streamlit wake-up screen. Both versions present the same saved, reviewed examples; the original Streamlit address remains available.
 
 An academic audit-research prototype that retrieves relevant PCAOB inspection findings before asking a language model to answer. The objective is to make selected findings easier for a junior auditor to locate, understand, and verify.
 
@@ -112,6 +114,8 @@ These exceptions are important: finding the correct evidence does not guarantee 
 
 ### Static portfolio edition
 
+Open the [portfolio demo](https://jeffrey-case-pcaob-audit.budrock.chatgpt.site) to explore the project without an API key or application wake-up screen.
+
 The `portfolio/` interface presents the same four saved, human-reviewed examples, with direct links to the cited PDF pages and separate metrics for answer support and citation accuracy. It uses no model API or running Python server when hosted. Source notes may be abridged; the original report is the authoritative source. The benchmark results and saved model answers are unchanged.
 
 Build and preview it with Python's standard library:
@@ -125,7 +129,7 @@ Open `http://localhost:8765`. The generated `dist/` folder can be served by a st
 
 ### Original Streamlit edition
 
-Open the [live recruiter demo](https://pcaob-rag-audit-assistant.streamlit.app/), or run it locally using the instructions below. The default Streamlit app uses reviewed, saved examples. It does not require an API key and does not send questions to an external model.
+Open the [original Streamlit demo](https://pcaob-rag-audit-assistant.streamlit.app/), or run it locally using the instructions below. This address is retained for existing links and includes a link to the updated portfolio. The Streamlit app uses reviewed, saved examples. It does not require an API key and does not send questions to an external model.
 
 ```bash
 git clone https://github.com/JeffreyCase/pcaob-rag-audit-assistant.git
