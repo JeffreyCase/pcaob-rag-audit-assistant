@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Jeffrey Case's audit research portfolio: explore four reviewed PCAOB RAG examples, follow original report citations, and inspect benchmark results and limitations.">
+  <meta name="theme-color" content="#162f39">
+  <title>PCAOB RAG Audit Assistant | Jeffrey Case</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#examples">Skip to reviewed examples</a>
+<header class="topbar"><div class="wrap">
+  <div class="identity"><span class="monogram" aria-hidden="true">JC</span><div><strong>Jeffrey Case</strong><span>Rutgers MAcc · Accounting &amp; Analytics</span></div></div>
+  <nav class="toplinks" aria-label="Project links"><a href="#method">Method &amp; results</a><a href="https://github.com/JeffreyCase/pcaob-rag-audit-assistant" target="_blank" rel="noopener noreferrer">View GitHub ↗</a></nav>
+</div></header>
+<main class="wrap">
+  <section class="intro" aria-labelledby="title">
+    <p class="eyebrow">Audit research · Independent portfolio edition</p>
+    <h1 id="title">PCAOB RAG Audit Assistant</h1>
+    <p class="lede">A research prototype that connects explanations of selected audit findings to the original report pages. Explore what it answered, what it refused, and where it fell short.</p>
+    <div class="scope"><span>6 public PCAOB reports</span><span>Deloitte &amp; EY</span><span>2022–2024 inspections</span><span>Revenue · Part I.A</span></div>
+  </section>
+  <div class="metrics" aria-label="Human-reviewed benchmark results">{{METRICS}}</div>
+  <p class="metric-context">Fixed benchmark: 9 answerable and 3 intentionally unsupported questions. Retrieval checks improved from {{BASELINE}}/12. These results do not establish general or production accuracy.</p>
+  <section id="examples" aria-labelledby="examples-heading">
+    <div class="section-heading"><h2 id="examples-heading">Explore the evidence</h2><p>Four saved, human-reviewed examples · No live AI generation</p></div>
+    <noscript><p class="noscript">JavaScript is off. All four examples are displayed below; use the links to jump between them.</p></noscript>
+    <div class="explorer">
+      <nav class="example-nav" aria-label="Reviewed examples"><p class="nav-label">Choose an example</p>{{NAV}}<p class="demo-note">These are saved project outputs. No API key is required, and selecting an example does not send a question to a model.</p></nav>
+      <div class="example-content" aria-live="polite" aria-atomic="false">{{EXAMPLES}}</div>
+    </div>
+    <p class="disclaimer">Educational research only. Outputs are not audit evidence or authoritative guidance; original sources and professional judgment remain essential.</p>
+  </section>
+  <section class="details-grid" id="method" aria-label="Method and evaluation">
+    <div class="panel"><h2>From report to reviewed answer</h2>
+      <ol class="process">
+        <li><p><strong>Extract the relevant pages</strong>Read Part I.A in six public reports and preserve report and PDF page references.</p></li>
+        <li><p><strong>Retrieve evidence</strong>Search text passages with keyword and semantic retrieval. For cross-firm questions, search each firm separately and combine the results.</p></li>
+        <li><p><strong>Generate or refuse</strong>Give Gemini only the retrieved passages, with instructions to cite substantive claims and decline unsupported questions.</p></li>
+        <li><p><strong>Verify against the source</strong>Assess retrieval, answer support, citations, usefulness, and refusals through automated checks and human review.</p></li>
+      </ol>
+    </div>
+    <div class="panel"><h2>Results, with the limitations visible</h2>
+      <details open><summary>Two issues remained</summary><ul><li><strong>Q07 · Citation formatting.</strong> A supported answer contained a malformed citation label. Human review caught it.</li><li><strong>Q08 · Incorrect refusal.</strong> The correct evidence was retrieved, but the model declined to answer. Select the over-refusal example above to inspect it.</li></ul></details>
+      <details><summary>Full benchmark results</summary><table class="results-table"><thead><tr><th scope="col">Measure</th><th scope="col">Result</th></tr></thead><tbody>{{RESULTS}}</tbody></table><p>Usefulness scores cover the nine answerable questions. The plain comparison used the same model without retrieved excerpts. These are the project's recorded results; this presentation update did not rerun the benchmark.</p><p><a href="https://github.com/JeffreyCase/pcaob-rag-audit-assistant/blob/main/results/benchmark_questions.json" target="_blank" rel="noopener noreferrer">Read the 12 benchmark questions ↗</a></p></details>
+      <details><summary>Scope and professional judgment</summary><p>Six reports, two firms, three inspection years, and one audit topic form a small, deliberately limited corpus. Inspection findings cannot establish an overall ranking of firms.</p><p>No practicing-auditor pilot, measured research-time savings, or integration with a firm's methodology has been completed. Source verification and qualified professional review are still required.</p><p><a href="https://github.com/JeffreyCase/pcaob-rag-audit-assistant/blob/main/docs/GOVERNANCE.md" target="_blank" rel="noopener noreferrer">Read the governance notes ↗</a></p></details>
+    </div>
+  </section>
+  <section class="about" aria-labelledby="about-heading"><div><p class="eyebrow">Project contribution</p><h2 id="about-heading">Team origin.<br>Independent portfolio work.</h2></div><div><p>I developed this prototype as part of a four-person Rutgers MAcc project using extensive AI coding assistance. ChatGPT generated the Python implementation; I directed and reviewed the workflow, ran and tested the prototype, verified outputs against PCAOB sources, evaluated the results, and presented the architecture.</p><p>After the course submission, I independently converted the work into this public portfolio edition with AI assistance. My teammates and I shared the academic project's audit framing, written deliverables, and final presentation.</p><p class="attribution">The repository includes the original Python pipeline and instructions for optional live queries. This website presents saved examples so the project can be explored without running a model.</p></div></section>
+</main>
+<footer class="footer"><div class="wrap"><p>Academic portfolio project. Not affiliated with or endorsed by the PCAOB, Deloitte, EY, Google, AICPA, COSO, or Rutgers University.</p><a href="https://github.com/JeffreyCase/pcaob-rag-audit-assistant" target="_blank" rel="noopener noreferrer">Source &amp; documentation ↗</a></div></footer>
+</body></html>

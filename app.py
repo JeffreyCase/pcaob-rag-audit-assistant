@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from html import escape
 from pathlib import Path
 
@@ -77,8 +78,9 @@ with st.sidebar:
     st.link_button("View GitHub repository", GITHUB_URL, use_container_width=True)
     st.caption(
         "I originally developed this prototype with three classmates in the Rutgers "
-        "MAcc program. I built the Python pipeline and independently converted the "
-        "submitted prototype into this public portfolio demonstration."
+        "MAcc program using extensive AI coding assistance. I directed and tested "
+        "the Python workflow and independently converted the submitted prototype "
+        "into this public portfolio demonstration with AI assistance."
     )
 
 st.markdown(
@@ -152,11 +154,21 @@ with demo_tab:
     )
 
     if example["sources"]:
-        st.subheader("Source evidence")
+        st.subheader("Source notes")
+        st.caption("Notes may be abridged. Verify the wording in the original report.")
         for source in example["sources"]:
             with st.expander(source["citation"], expanded=True):
                 st.write(source["excerpt"])
-                st.link_button("Open official PCAOB report", source["source_url"])
+                page = re.search(r"PDF p\. (\d+)", source["citation"])
+                if page:
+                    page_number = page.group(1)
+                    st.link_button(
+                        f"Open official PDF · page {page_number}",
+                        source["source_url"].split("#", 1)[0] + f"#page={page_number}",
+                    )
+                else:
+                    st.link_button("Open official PCAOB report", source["source_url"])
+        st.caption("Links use PDF page numbers, which can differ from printed page numbers.")
     else:
         st.caption(
             "No source excerpt is presented because the correct behavior was to refuse "
@@ -230,14 +242,17 @@ with method_tab:
     with st.expander("Project origin, portfolio work, and AI assistance"):
         st.write(
             "I originally developed this prototype with three classmates in the "
-            "Rutgers Master of Accountancy program. I built the Python pipeline and "
-            "corresponding technical, testing, and results materials. My teammates "
+            "Rutgers Master of Accountancy program using extensive AI coding "
+            "assistance. ChatGPT generated the Python implementation; I directed "
+            "and reviewed the workflow, ran and tested the prototype, verified "
+            "outputs against PCAOB sources, evaluated results, and presented the "
+            "architecture. My teammates "
             "and I shared the audit framing, written deliverables, and final "
             "presentation. After submission, I independently reorganized the "
             "codebase, built and deployed this no-key Streamlit demonstration, added "
             "tests and public governance documentation, and validated the portfolio "
             "edition. I used Gemini as the generation and comparison model, while "
-            "other generative-AI tools assisted portions of brainstorming, code "
-            "refinement, drafting, and review. I reviewed and tested the public "
-            "portfolio changes before publication."
+            "other generative-AI tools assisted implementation, brainstorming, "
+            "drafting, and review, including the independent portfolio work. "
+            "I remain responsible for how this edition is presented."
         )
