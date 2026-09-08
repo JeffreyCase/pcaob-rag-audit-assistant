@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import shutil
@@ -87,7 +88,9 @@ def render_example(example: dict) -> str:
     )
 
 
-def build() -> Path:
+def build(output: str = "dist") -> Path:
+    if output not in {"dist", "docs"}:
+        raise ValueError("Output must be dist or docs")
     examples = json.loads((ROOT / "data/demo_answers.json").read_text(encoding="utf-8"))
     evaluation = json.loads(
         (ROOT / "results/evaluation_summary.json").read_text(encoding="utf-8")
@@ -132,13 +135,21 @@ def build() -> Path:
         html = html.replace("{{" + marker + "}}", value)
     if re.search(r"\{\{\w+\}\}", html):
         raise ValueError("Unresolved template marker")
-    destination = ROOT / "dist"
+    destination = ROOT / output
     destination.mkdir(exist_ok=True)
     (destination / "index.html").write_text(html, encoding="utf-8")
     for asset in ("styles.css", "app.js", "favicon.svg"):
         shutil.copyfile(ROOT / "portfolio" / asset, destination / asset)
+    if output == "docs":
+        (destination / ".nojekyll").write_text("", encoding="utf-8")
     return destination
 
 
 if __name__ == "__main__":
-    print(f"Built static portfolio: {build()}")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--output", choices=("dist", "docs"), default="dist",
+        help="Build into dist (default), or docs for GitHub Pages.",
+    )
+    args = parser.parse_args()
+    print(f"Built static portfolio: {build(args.output)}")

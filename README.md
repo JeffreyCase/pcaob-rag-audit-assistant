@@ -127,6 +127,14 @@ python -m http.server 8765 --directory dist
 
 Open `http://localhost:8765`. The generated `dist/` folder can be served by a static host without an application wake-up screen. The build reads the existing demo and evaluation JSON files, so it does not duplicate the recorded answers or results in a separate data source.
 
+For GitHub Pages, regenerate the published files after editing the portfolio template, assets, saved examples, or evaluation summary:
+
+```bash
+python scripts/build_portfolio.py --output docs
+```
+
+Commit the generated files in `docs/` together with the source changes. The Pages publishing source is `main` → `/docs`. The builder preserves `docs/GOVERNANCE.md` and writes `.nojekyll` so GitHub serves the static files directly. The default `dist/` build and original Streamlit application remain available.
+
 ### Original Streamlit edition
 
 Open the [original Streamlit demo](https://pcaob-rag-audit-assistant.streamlit.app/), or run it locally using the instructions below. This address is retained for existing links and includes a link to the updated portfolio. The Streamlit app uses reviewed, saved examples. It does not require an API key and does not send questions to an external model.
