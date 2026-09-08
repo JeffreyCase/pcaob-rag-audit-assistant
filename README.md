@@ -1,6 +1,6 @@
 # PCAOB RAG Audit Assistant
 
-[Open portfolio demo](https://jeffrey-case-pcaob-audit.budrock.chatgpt.site) · [Original Streamlit demo](https://pcaob-rag-audit-assistant.streamlit.app/)
+[Open portfolio demo](https://jeffreycase.github.io/pcaob-rag-audit-assistant/) · [Original Streamlit demo](https://pcaob-rag-audit-assistant.streamlit.app/)
 
 The updated portfolio opens without a Streamlit wake-up screen. Both versions present the same saved, reviewed examples; the original Streamlit address remains available.
 
@@ -114,7 +114,7 @@ These exceptions are important: finding the correct evidence does not guarantee 
 
 ### Static portfolio edition
 
-Open the [portfolio demo](https://jeffrey-case-pcaob-audit.budrock.chatgpt.site) to explore the project without an API key or application wake-up screen.
+Open the [portfolio demo](https://jeffreycase.github.io/pcaob-rag-audit-assistant/) to explore the project without an API key or application wake-up screen.
 
 The `portfolio/` interface presents the same four saved, human-reviewed examples, with direct links to the cited PDF pages and separate metrics for answer support and citation accuracy. It uses no model API or running Python server when hosted. Source notes may be abridged; the original report is the authoritative source. The benchmark results and saved model answers are unchanged.
 

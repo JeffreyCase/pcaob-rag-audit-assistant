@@ -11,7 +11,7 @@ import streamlit as st
 
 ROOT = Path(__file__).resolve().parent
 GITHUB_URL = "https://github.com/JeffreyCase/pcaob-rag-audit-assistant"
-PORTFOLIO_URL = "https://jeffrey-case-pcaob-audit.budrock.chatgpt.site"
+PORTFOLIO_URL = "https://jeffreycase.github.io/pcaob-rag-audit-assistant/"
 
 
 @st.cache_data
