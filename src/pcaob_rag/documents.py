@@ -1,14 +1,12 @@
-"""Download, extract, and chunk selected public PCAOB inspection reports."""
+"""Read local PDFs, extract, and chunk selected public PCAOB inspection reports."""
 
 from __future__ import annotations
 
 import json
 import re
-import shutil
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Iterable
-from urllib.request import Request, urlopen
 
 import fitz
 import pandas as pd
@@ -46,7 +44,7 @@ def pdf_is_readable(path: str | Path) -> bool:
     """Return True when a path looks like a valid, non-empty PDF."""
 
     pdf_path = Path(path)
-    if not pdf_path.exists() or pdf_path.stat().st_size <= 50_000:
+    if not pdf_path.is_file() or pdf_path.stat().st_size == 0:
         return False
     try:
         with fitz.open(pdf_path) as document:
@@ -55,33 +53,24 @@ def pdf_is_readable(path: str | Path) -> bool:
         return False
 
 
-def download_report(spec: ReportSpec, destination_dir: str | Path) -> Path:
-    """Download one report from its official PCAOB URL when not cached."""
+def require_local_report(spec: ReportSpec, raw_pdf_dir: str | Path) -> Path:
+    """Validate a user-supplied PDF without requesting or modifying any files."""
 
-    destination_dir = Path(destination_dir)
-    destination_dir.mkdir(parents=True, exist_ok=True)
-    destination = destination_dir / spec.filename
-
-    if pdf_is_readable(destination):
-        return destination
-
-    temporary_path = destination.with_suffix(".download")
-    request = Request(
-        spec.source_url,
-        headers={"User-Agent": "PCAOB RAG academic portfolio prototype"},
-    )
-    with (
-        urlopen(request, timeout=60) as response,
-        temporary_path.open("wb") as output_file,
-    ):
-        shutil.copyfileobj(response, output_file)
-
-    if not pdf_is_readable(temporary_path):
-        temporary_path.unlink(missing_ok=True)
-        raise ValueError(f"Downloaded file is not a readable PDF: {spec.filename}")
-
-    temporary_path.replace(destination)
-    return destination
+    pdf_path = Path(raw_pdf_dir) / spec.filename
+    if not pdf_path.exists():
+        raise FileNotFoundError(
+            f"Missing local report: {pdf_path}. "
+            "Obtain the official PDF manually, subject to the source's terms, "
+            f"and save an unmodified copy with this filename. Source: {spec.source_url}. "
+            "This pipeline does not download reports. See README.md for setup."
+        )
+    if not pdf_is_readable(pdf_path):
+        raise ValueError(
+            f"Local report is not a readable, non-empty PDF: {pdf_path}. "
+            "Check the file and replace it manually if needed. "
+            "The existing file has not been changed."
+        )
+    return pdf_path
 
 
 def clean_page_text(text: str) -> str:
@@ -229,11 +218,14 @@ def build_corpus(
     manifest_path: str | Path,
     raw_pdf_dir: str | Path,
 ) -> pd.DataFrame:
-    """Download all scoped reports and build the revenue-focused corpus."""
+    """Build the revenue-focused corpus from locally supplied reports only."""
 
+    reports = load_report_manifest(manifest_path)
+    local_reports = [
+        (spec, require_local_report(spec, raw_pdf_dir)) for spec in reports
+    ]
     selected_pages: list[dict] = []
-    for spec in load_report_manifest(manifest_path):
-        pdf_path = download_report(spec, raw_pdf_dir)
+    for spec, pdf_path in local_reports:
         selected_pages.extend(select_part_ia_pages(extract_pages(spec, pdf_path)))
     return build_revenue_chunks(selected_pages)
 

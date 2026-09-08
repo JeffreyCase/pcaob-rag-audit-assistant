@@ -34,7 +34,7 @@ The PCAOB inspects portions of registered firms' audit work and elements of thei
 
 ## What the tool does
 
-1. Downloads the six reports from official PCAOB links.
+1. Reads six locally supplied reports listed in the official PCAOB source manifest.
 2. Extracts the detailed Part I.A pages and preserves report/page metadata.
 3. Splits relevant text into overlapping passages of approximately 350 words.
 4. Indexes the passages using both TF-IDF and semantic embeddings.
@@ -164,7 +164,11 @@ streamlit run app.py
 
 ### Optional live query
 
-Live generation is not needed to review the portfolio. To reproduce the document pipeline and run a new question:
+Live generation is not needed to review the portfolio. To reproduce the document pipeline, first obtain the six official PDFs manually and place unmodified copies in `data/raw_pdfs/`. The [report manifest](config/reports.json) provides each official source link and the exact filename to use: `deloitte_2022.pdf`, `deloitte_2023.pdf`, `deloitte_2024.pdf`, `ey_2022.pdf`, `ey_2023.pdf`, and `ey_2024.pdf`.
+
+Review the [PCAOB Terms of Use](https://pcaobus.org/privacypolicy), including the conditions for using public materials and the restrictions on automated collection. Preserve source attribution, copyright and other notices, and any applicable third-party rights. Local file processing does not itself grant permission for every use or redistribution. The pipeline makes no requests to download reports; missing or unreadable PDFs produce an error with setup instructions.
+
+Once those files are in place, build the local corpus:
 
 ```bash
 pip install -r requirements-pipeline.txt
@@ -178,7 +182,7 @@ Set `GEMINI_API_KEY` in your local environment—never in committed code—and t
 python scripts/run_live_query.py "What revenue-related data reliability issues appeared in the selected reports?"
 ```
 
-Downloaded PDFs, processed chunks, model files, output folders, and `.env` files are excluded from version control.
+Local source PDFs, processed chunks, model files, output folders, and `.env` files are excluded from version control. This source-acquisition change does not rerun or change the saved benchmark results or public demo examples.
 
 ## Repository structure
 

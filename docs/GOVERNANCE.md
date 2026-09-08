@@ -27,6 +27,12 @@ It is not intended to:
 
 These measures reduce risk but do not establish production readiness or regulatory compliance.
 
+## Source acquisition and use
+
+The optional corpus builder reads user-supplied local PDFs. It does not fetch reports from the PCAOB website, and it stops if a required file is missing or unreadable. The public demos use saved examples and do not run the corpus builder.
+
+Source: [Public Company Accounting Oversight Board](https://pcaobus.org/). Its [Terms of Use](https://pcaobus.org/privacypolicy) permit use of public materials subject to conditions and restrict automated collection. Obtain the scoped reports manually, keep original files and notices intact, provide attribution, and respect applicable licenses and third-party rights. Locally processing a PDF does not establish permission for every downstream use. Project explanations and abridged source notes are separate from the original reports; verify their wording and context in the linked official PDFs.
+
 ## Future-state controls for a firm deployment
 
 | Risk | Illustrative control |

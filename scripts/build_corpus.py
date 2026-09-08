@@ -1,4 +1,4 @@
-"""Download the scoped public reports and build the local chunk corpus."""
+"""Build the local chunk corpus from user-supplied PDFs; see README.md for setup."""
 
 from pathlib import Path
 
