@@ -1,10 +1,12 @@
 # PCAOB RAG Audit Assistant
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pcaob-rag-audit-assistant.streamlit.app/)
+[Open portfolio demo](https://jeffrey-case-pcaob-audit.budrock.chatgpt.site) · [Original Streamlit demo](https://pcaob-rag-audit-assistant.streamlit.app/)
+
+The updated portfolio opens without a Streamlit wake-up screen. Both versions present the same saved, reviewed examples; the original Streamlit address remains available.
 
 An academic audit-research prototype that retrieves relevant PCAOB inspection findings before asking a language model to answer. The objective is to make selected findings easier for a junior auditor to locate, understand, and verify.
 
-I originally developed this prototype as part of a four-person Rutgers Master of Accountancy in Accounting & Analytics team. My primary responsibility was the Python pipeline and the related technical, testing, and results materials. After the course submission, I independently converted the prototype into this public portfolio edition by reorganizing the codebase, building and deploying the Streamlit demonstration, adding tests and governance documentation, and validating the final experience.
+I developed this prototype as part of a four-person Rutgers Master of Accountancy in Accounting & Analytics team using extensive AI coding assistance. ChatGPT generated the Python implementation; I directed and reviewed the workflow, ran and tested the prototype, verified outputs against PCAOB sources, evaluated the results, and presented the architecture. After the course submission, I independently converted the work into this public portfolio edition with AI assistance.
 
 ## The business problem
 
@@ -110,7 +112,24 @@ These exceptions are important: finding the correct evidence does not guarantee 
 
 ## Run the recruiter demo
 
-Open the [live recruiter demo](https://pcaob-rag-audit-assistant.streamlit.app/), or run it locally using the instructions below. The default Streamlit app uses reviewed, saved examples. It does not require an API key and does not send questions to an external model.
+### Static portfolio edition
+
+Open the [portfolio demo](https://jeffrey-case-pcaob-audit.budrock.chatgpt.site) to explore the project without an API key or application wake-up screen.
+
+The `portfolio/` interface presents the same four saved, human-reviewed examples, with direct links to the cited PDF pages and separate metrics for answer support and citation accuracy. It uses no model API or running Python server when hosted. Source notes may be abridged; the original report is the authoritative source. The benchmark results and saved model answers are unchanged.
+
+Build and preview it with Python's standard library:
+
+```bash
+python scripts/build_portfolio.py
+python -m http.server 8765 --directory dist
+```
+
+Open `http://localhost:8765`. The generated `dist/` folder can be served by a static host without an application wake-up screen. The build reads the existing demo and evaluation JSON files, so it does not duplicate the recorded answers or results in a separate data source.
+
+### Original Streamlit edition
+
+Open the [original Streamlit demo](https://pcaob-rag-audit-assistant.streamlit.app/), or run it locally using the instructions below. This address is retained for existing links and includes a link to the updated portfolio. The Streamlit app uses reviewed, saved examples. It does not require an API key and does not send questions to an external model.
 
 ```bash
 git clone https://github.com/JeffreyCase/pcaob-rag-audit-assistant.git
@@ -163,6 +182,7 @@ pcaob-rag-audit-assistant/
 ├── data/demo_answers.json         # Curated, reviewed examples only
 ├── docs/GOVERNANCE.md             # Production risks and control considerations
 ├── notebooks/pcaob_rag_demo.ipynb # Clean project walkthrough
+├── portfolio/                    # Static demonstration template and assets
 ├── results/                       # Benchmark questions and summary metrics
 ├── scripts/                       # Corpus build and optional live query
 ├── src/pcaob_rag/                 # Extraction, retrieval, generation, evaluation
@@ -191,10 +211,10 @@ Any production use would require approved data handling, prompt sanitization, ac
 
 ## Project origin, individual contribution, and AI assistance
 
-I originally completed this academic project with three classmates in the Rutgers MAcc program. I developed the Python pipeline and the corresponding technical, testing, and results slides, and I contributed to debugging and evaluation. My teammates and I shared responsibility for the problem framing, audit interpretation, written deliverables, and final presentation.
+I originally completed this academic project with three classmates in the Rutgers MAcc program. I was responsible for the coding workstream and the related technical, testing, and results materials, using ChatGPT to generate the Python implementation. I directed, ran, reviewed, tested, and evaluated the work rather than writing the Python independently. My teammates and I shared responsibility for the problem framing, audit interpretation, written deliverables, and final presentation.
 
 After the course submission, I independently led the portfolio conversion. I reorganized the original work into the public codebase shown here, created and deployed the no-key Streamlit demonstration, added regression tests and public governance documentation, and validated the final repository and app. I completed this post-course portfolio work independently of the original team.
 
-I used Gemini as the generation engine and the ungrounded comparison model. I also used ChatGPT, Claude, and other generative-AI assistance for portions of brainstorming, code refinement and debugging, wireframe or presentation development, drafting, and review. My teammates and I reviewed, tested, corrected, and approved the submitted academic work. I reviewed and tested the subsequent public portfolio changes and remain responsible for how this edition is presented.
+I used Gemini as the generation engine and the ungrounded comparison model. I used ChatGPT for implementation and other generative-AI assistance, including Claude, for brainstorming, debugging, wireframe or presentation development, drafting, and review. My teammates and I reviewed, tested, corrected, and approved the submitted academic work. The public portfolio and subsequent presentation improvements also use AI assistance. I remain responsible for how this edition is presented.
 
 This project is not affiliated with or endorsed by the PCAOB, Deloitte, EY, Google, AICPA, COSO, or Rutgers University.

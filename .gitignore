@@ -21,6 +21,7 @@ data/raw_pdfs/
 data/processed/
 outputs/
 models/
+dist/
 
 # Operating-system and editor files
 .DS_Store
